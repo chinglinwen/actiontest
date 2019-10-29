@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	resty "gopkg.in/resty.v1"
+	resty "github.com/go-resty/resty/v2"
 )
 
 func main() {
@@ -12,6 +12,7 @@ func main() {
 
 	resp, err := client.SetDebug(true).
 		R().
+		EnableTrace().
 		Get("https://httpbin.org/get")
 
 	// Explore response object
