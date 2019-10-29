@@ -1,7 +1,9 @@
 name: CI
 
-on: [push]
-
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "0 0 0 1 *"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,6 +17,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo env
-          env
+          #env
           echo ping baidu.com
-          ping baidu.com
+          #ping baidu.com
