@@ -29,7 +29,10 @@ jobs:
           fi
 
       - name: Build
-        run: go build -v .
+        run: |
+          go build -v .
+          echo run actiontest
+          ./actiontest
 
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
