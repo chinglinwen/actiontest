@@ -10,8 +10,8 @@ func main() {
 	fmt.Printf("starting...\n")
 	client := resty.New()
 
-	resp, err := client.R().
-		EnableTrace().
+	resp, err := client.SetDebug(true).
+		R().
 		Get("https://httpbin.org/get")
 
 	// Explore response object
