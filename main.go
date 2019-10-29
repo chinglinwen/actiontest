@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-  fmt.Printf("envs: ", os.Environ())
+	fmt.Printf("envs: ", os.Environ())
 	fmt.Println("Hello, action")
 }
